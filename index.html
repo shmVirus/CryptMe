@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CryptMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>CryptMe - your Crypto toolbox!</h2>
+    <div class="container">
+        <div class="key-section">
+            <button class="generate-key-button" onclick="generateKeyListener()">Generate Key</button>
+        </div>
+        <div class="key-section key-output">
+            <div class="key-column">
+                <label for="privateKey">Private Key:</label>
+                <textarea id="privateKey" class="key-textarea" style="height: 25px;"></textarea>
+            </div>
+
+            <div class="key-column">
+                <label for="publicKey">Public Key:</label>
+                <textarea id="publicKey" class="key-textarea" style="height: 25px;"></textarea>
+            </div>
+        </div>
+
+        <div class="encryption-decryption">
+            <div class="encryption-column">
+                <h4>Encryption</h4>
+                <label for="plaintext">Plain Text:</label>
+                <textarea id="plaintext" class="encryption-textarea" placeholder="plain text i.e. Hello" style="height: 15px;"></textarea>
+
+                <label for="encryptKey">Key Pair:</label>
+                <textarea id="encryptKey" class="encryption-textarea" placeholder="key pair should be in n, k form i.e. 51, 11" style="height: 15px;"></textarea>
+
+                <button class="encrypt-button" onclick="encryptListener()">Encrypt</button>
+
+                <label for="encryptedText">Encrypted Message:</label>
+                <textarea id="encryptedText" class="encryption-result-textarea" readonly style="height: 15px;"></textarea>
+            </div>
+
+            <div class="decryption-column">
+                <h4>Decryption</h4>
+                <label for="decryptedText">Cipher Text:</label>
+                <textarea id="decryptedText" class="decryption-textarea" placeholder="cipher text i.e. ǫƵĬĬ¦" style="height: 15px;"></textarea>
+
+                <label for="decryptKey">Key Pair:</label>
+                <textarea id="decryptKey" class="decryption-textarea" placeholder="key pair should be in n, k form i.e. 51, 11" style="height: 15px;"></textarea>
+
+                <button class="decrypt-button" onclick="decryptListener()">Decrypt</button>
+
+                <label for="decryptedMessage">Decrypted Message:</label>
+                <textarea id="decryptedMessage" class="decryption-result-textarea" readonly style="height: 15px;"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
